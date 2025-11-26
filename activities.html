@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Activities | Julia Mae</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #66e37f;
+            font-family: 'Poppins', sans-serif;
+            padding-top: 140px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 40px;
+            font-weight: 700;
+            color: #222;
+        }
+
+        .works-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .work-card {
+            background-color: #a0f4a1;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .work-card h3 {
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .work-card p {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .work-card a {
+            display: inline-block;
+            width: 140px;
+            padding: 10px 0;
+            color: #000;
+            border-radius: 10px;
+            text-decoration: none;
+            margin: 20px auto 0 auto;
+        }
+
+        .navbar-outer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            z-index: 1000;
+        }
+
+        .navbar-custom {
+            background-color: #a0f4a1;
+            border-radius: 50px;
+            margin: 20px auto;
+            padding: 10px 30px;
+            max-width: 90%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.356);
+        }
+
+        .navbar-brand span {
+            font-size: 32px;
+            font-weight: 600;
+            color: black;
+        }
+
+        .nav-link {
+            color: black;
+            font-weight: normal;
+            margin-right: 20px;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background-color: transparent;
+        }
+
+        .navbar-collapse {
+            background-color: #a0f4a1;
+            border-radius: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .thumb-box {
+            width: 100%;
+            height: 230px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .thumb-box iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            pointer-events: none;
+            transform: scale(1.0);
+            transform-origin: top left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar-outer">
+        <nav class="navbar navbar-expand-md navbar-custom">
+            <div class="container m-2">
+                <a class="navbar-brand" href="#"><span>Welcome!</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#home-container">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#about-container">About me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#info-container">Information</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="activities.html">Activities</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container mt-3">
+        <h2 class="text-start">Activities</h2>
+
+        <div class="row">
+
+            <div class="col-12 col-md-6 col-lg-4 d-flex mb-4">
+                <div class="work-card flex-fill d-flex flex-column">
+
+                    <div class="thumb-box">
+                        <iframe src="https://mrsgnjuliaaa.github.io/Product/" scrolling="no"></iframe>
+                    </div>
+
+                    <h3>Activity 4 - Infinix Hot 50</h3>
+                    <p>A website showcasing the Infinix Hot 50.</p>
+                    <a href="https://mrsgnjuliaaa.github.io/Product/" target="_blank"
+                        class="btn btn-outline-dark mt-auto">View Website</a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 d-flex mb-4">
+                <div class="work-card flex-fill d-flex flex-column">
+
+                    <div class="thumb-box">
+                        <iframe src="https://mrsgnjuliaaa.github.io/Showcase/" scrolling="no"></iframe>
+                    </div>
+
+                    <h3>Activity 5 - Boracay, Philippines</h3>
+                    <p>A website showcasing Boracay, the tropical paradise of the Philippines.</p>
+                    <a href="https://mrsgnjuliaaa.github.io/Showcase/" target="_blank"
+                        class="btn btn-outline-dark mt-auto">View Website</a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 d-flex mb-4">
+                <div class="work-card flex-fill d-flex flex-column">
+
+                    <div class="thumb-box">
+                        <iframe src="https://mrsgnjuliaaa.github.io/Gallery/" scrolling="no"></iframe>
+                    </div>
+
+                    <h3>Activity 6 - Philippine Tourist Spots Gallery</h3>
+                    <p>A photo gallery website showcasing famous tourist spots across the Philippines.</p>
+                    <a href="https://mrsgnjuliaaa.github.io/Gallery/" target="_blank"
+                        class="btn btn-outline-dark mt-auto">View Website</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
