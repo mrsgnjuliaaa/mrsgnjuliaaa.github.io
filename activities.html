@@ -4,122 +4,406 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Activities | Julia Mae</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Works | Julia Mae</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <style>
+        body {
+            background-color: #F1F5F2;
+            font-family: 'Poppins', sans-serif;
+            color: #1F2933;
+            padding-top: 100px;
+        }
+
         html {
             scroll-behavior: smooth;
         }
 
-        body {
-            background-color: #66e37f;
-            font-family: 'Poppins', sans-serif;
-            padding-top: 140px;
-            text-align: center;
+        .navbar-fixed {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: calc(100% - 2in);
+            z-index: 1000;
+            box-sizing: border-box;
         }
 
-        h2 {
-            margin-bottom: 40px;
-            font-weight: 700;
-            color: #222;
+        .soft-box {
+            background-color: #ffffff;
+            border-radius: 40px;
+            box-shadow: 0 4px 20px rgba(107, 143, 113, 0.1);
+            border: 1px solid #D1DED6;
         }
 
-        .works-container {
-            max-width: 1000px;
-            margin: 0 auto;
+        .navbar-box {
+            background-color: #ffffff;
+            border-radius: 35px;
+            box-shadow: 0 4px 20px rgba(107, 143, 113, 0.1);
+            border: 1px solid #D1DED6;
+            padding: 15px 30px;
+            box-sizing: border-box;
+        }
+
+        .logo-container {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
             display: flex;
-            flex-wrap: wrap;
+            align-items: center;
             justify-content: center;
-            gap: 30px;
+            background-color: #ffffff;
+            border: 2px solid #6B8F71;
+            box-shadow: 0 2px 8px rgba(107, 143, 113, 0.3);
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .nav-link-custom {
+            color: #1F2933;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            margin: 0 5px;
+        }
+
+        .nav-link-custom:hover {
+            background-color: #6B8F71;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-link-custom.active {
+            background-color: #6B8F71;
+            color: white;
+        }
+
+        .welcome-text {
+            color: #1F2933;
+            font-weight: 600;
+            font-size: 20px;
+            margin-left: 15px;
+        }
+
+        footer {
+            background-color: #ffffff;
+            border-top: 1px solid #D1DED6;
+            padding: 50px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1F2933;
+            margin-bottom: 15px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #4B5563;
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #6B8F71;
+            font-weight: 500;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #6B8F71;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: #5a7a5f;
+            transform: translateY(-3px);
+        }
+
+        .footer-divider {
+            height: 1px;
+            background-color: #D1DED6;
+            margin: 30px 0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: #4B5563;
+            font-size: 14px;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #1F2933;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+        }
+
+        .theme-toggle:hover {
+            background-color: #6B8F71;
+            color: white;
+        }
+
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .navbar-box {
+            background-color: #2d2d2d;
+            border-color: #444;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .nav-link-custom {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .nav-link-custom:hover,
+        body.dark-mode .nav-link-custom.active {
+            background-color: #6B8F71;
+            color: white;
+        }
+
+        body.dark-mode .theme-toggle {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .soft-box {
+            background-color: #2d2d2d;
+            border-color: #444;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .soft-box:hover {
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        body.dark-mode .page-title {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .work-card {
+            background-color: #2d2d2d;
+            border-color: #444;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .work-card:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        body.dark-mode .work-card h3 {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .work-card p {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode .thumb-box {
+            background-color: #333;
+        }
+
+        body.dark-mode .btn-view {
+            background-color: #6B8F71;
+        }
+
+        body.dark-mode .btn-view:hover {
+            background-color: #5a7a5f;
+        }
+
+        body.dark-mode footer {
+            background-color: #2d2d2d;
+            border-top-color: #444;
+        }
+
+        body.dark-mode .footer-section h4 {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .footer-section a {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode .footer-section a:hover {
+            color: #9dc683;
+        }
+
+        body.dark-mode .footer-bottom {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode .logo-container {
+            background-color: #2d2d2d;
+            border-color: #6B8F71;
+        }
+
+        body.dark-mode .welcome-text {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .back-to-top:hover {
+            background-color: #5a7a5f;
+        }
+
+        .back-to-top {
+            background-color: #6B8F71;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 20px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: #5a7a5f;
+            transform: translateY(-3px);
+        }
+
+        .main-content {
+            margin-top: 40px;
+            margin-left: 1in;
+            margin-right: 1in;
+            max-width: calc(100% - 2in);
+        }
+
+        .page-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1F2933;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .page-title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background-color: #6B8F71;
+            border-radius: 2px;
         }
 
         .work-card {
-            background-color: #a0f4a1;
+            background-color: #ffffff;
             border-radius: 30px;
             padding: 30px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            width: 300px;
-            text-align: center;
+            box-shadow: 0 4px 20px rgba(107, 143, 113, 0.1);
+            border: 1px solid #D1DED6;
+            height: 100%;
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .work-card:hover {
+            box-shadow: 0 8px 30px rgba(107, 143, 113, 0.15);
+            transform: translateY(-5px);
         }
 
         .work-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1F2933;
             margin-bottom: 15px;
-            color: #222;
         }
 
         .work-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #4B5563;
             margin-bottom: 20px;
-            color: #333;
-        }
-
-        .work-card a {
-            display: inline-block;
-            width: 140px;
-            padding: 10px 0;
-            color: #000;
-            border-radius: 10px;
-            text-decoration: none;
-            margin: 20px auto 0 auto;
-        }
-
-        .navbar-outer {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            z-index: 1000;
-        }
-
-        .navbar-custom {
-            background-color: #a0f4a1;
-            border-radius: 50px;
-            margin: 20px auto;
-            padding: 10px 30px;
-            max-width: 90%;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.356);
-        }
-
-        .navbar-brand span {
-            font-size: 32px;
-            font-weight: 600;
-            color: black;
-        }
-
-        .nav-link {
-            color: black;
-            font-weight: normal;
-            margin-right: 20px;
-        }
-
-        .nav-link:hover {
-            text-decoration: underline;
-        }
-
-        .navbar-toggler {
-            border: none;
-            background-color: transparent;
-        }
-
-        .navbar-collapse {
-            background-color: #a0f4a1;
-            border-radius: 20px;
-            padding: 10px;
-            text-align: center;
+            flex-grow: 1;
         }
 
         .thumb-box {
             width: 100%;
-            height: 230px;
-            border-radius: 10px;
+            height: 200px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(107, 143, 113, 0.2);
+            margin-bottom: 25px;
+            background-color: #F1F5F2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .thumb-box iframe {
@@ -127,108 +411,485 @@
             height: 100%;
             border: none;
             pointer-events: none;
-            transform: scale(1.0);
-            transform-origin: top left;
+        }
+
+        .btn-view {
+            background-color: #6B8F71;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .btn-view:hover {
+            background-color: #5a7a5f;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(107, 143, 113, 0.3);
+        }
+
+        .logo-placeholder {
+            width: 100%;
+            height: 100%;
+            background-color: #6B8F71;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        @media (min-width: 1200px) {
+            .navbar-fixed {
+                width: 95%;
+                max-width: 1400px;
+                top: 20px;
+            }
+            .navbar-box {
+                padding: 15px 30px;
+                border-radius: 35px;
+            }
+            .logo-container {
+                width: 50px;
+                height: 50px;
+            }
+            .welcome-text {
+                font-size: 20px;
+                margin-left: 15px;
+            }
+            .nav-link-custom {
+                padding: 10px 20px;
+                font-size: 15px;
+                margin: 0 5px;
+            }
+            .main-content {
+                margin-left: 1in;
+                margin-right: 1in;
+                max-width: calc(100% - 2in);
+            }
+        }
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .navbar-fixed {
+                width: 93%;
+                max-width: 1200px;
+                top: 18px;
+            }
+            .navbar-box {
+                padding: 14px 28px;
+                border-radius: 32px;
+            }
+            .logo-container {
+                width: 48px;
+                height: 48px;
+            }
+            .welcome-text {
+                font-size: 18px;
+                margin-left: 12px;
+            }
+            .nav-link-custom {
+                padding: 9px 18px;
+                font-size: 14px;
+                margin: 0 4px;
+            }
+            .main-content {
+                margin-left: 1in;
+                margin-right: 1in;
+                max-width: calc(100% - 2in);
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .main-content {
+                margin-left: 1in;
+                margin-right: 1in;
+                max-width: calc(100% - 2in);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .main-content {
+                margin-left: 1in;
+                margin-right: 1in;
+                max-width: calc(100% - 2in);
+            }
+        }
+
+        @media (min-width: 576px) and (max-width: 991px) {
+            body {
+                padding-top: 95px;
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+            .navbar-fixed {
+                width: 96%;
+                max-width: 900px;
+                top: 12px;
+            }
+            .navbar-box {
+                padding: 13px 24px;
+                border-radius: 30px;
+            }
+            .logo-container {
+                width: 44px;
+                height: 44px;
+            }
+            .welcome-text {
+                font-size: 16px;
+                margin-left: 10px;
+            }
+            .nav-link-custom {
+                padding: 7px 14px;
+                font-size: 13px;
+                margin: 0 3px;
+            }
+            .main-content {
+                margin-left: 0.7in;
+                margin-right: 0.7in;
+                max-width: calc(100% - 1.4in);
+            }
+            .page-title {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 90px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .navbar-fixed {
+                width: 96%;
+                top: 10px;
+                max-width: 800px;
+            }
+
+            .navbar-box {
+                padding: 12px 20px;
+                border-radius: 28px;
+            }
+
+            .logo-container {
+                width: 45px;
+                height: 45px;
+            }
+
+            .welcome-text {
+                font-size: 17px;
+                margin-left: 10px;
+            }
+
+            .nav-link-custom {
+                padding: 8px 15px;
+                font-size: 13px;
+                margin: 0 3px;
+            }
+
+            .main-content {
+                margin-left: 0.6in;
+                margin-right: 0.6in;
+                max-width: calc(100% - 1.2in);
+            }
+
+            .page-title {
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+
+            .work-card {
+                padding: 25px;
+            }
+
+            .thumb-box {
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            body {
+                padding-top: 85px;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+
+            .navbar-fixed {
+                width: 97%;
+                top: 8px;
+                max-width: 550px;
+            }
+
+            .navbar-box {
+                padding: 11px 18px;
+                border-radius: 25px;
+            }
+
+            .logo-container {
+                width: 40px;
+                height: 40px;
+            }
+
+            .welcome-text {
+                font-size: 15px;
+                margin-left: 8px;
+            }
+
+            .nav-link-custom {
+                padding: 6px 12px;
+                margin: 0 2px;
+                font-size: 12px;
+            }
+
+            .main-content {
+                margin-left: 0.25in;
+                margin-right: 0.25in;
+                max-width: calc(100% - 0.5in);
+            }
+
+            .page-title {
+                font-size: 24px;
+                margin-bottom: 25px;
+            }
+
+            .work-card {
+                padding: 20px;
+            }
+
+            .work-card h3 {
+                font-size: 20px;
+            }
+
+            .thumb-box {
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                padding: 40px 15px 25px;
+            }
+
+            .footer-container {
+                gap: 30px;
+                grid-template-columns: 1fr;
+            }
+
+            .footer-section h4 {
+                font-size: 16px;
+            }
+
+            .footer-section a {
+                font-size: 14px;
+            }
+
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            footer {
+                padding: 30px 10px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-container {
+                gap: 25px;
+            }
+
+            .footer-section h4 {
+                font-size: 15px;
+            }
+
+            .footer-section ul li {
+                margin-bottom: 8px;
+            }
+
+            .footer-section a {
+                font-size: 13px;
+            }
+
+            .footer-bottom {
+                font-size: 12px;
+            }
+
+            .back-to-top {
+                width: 38px;
+                height: 38px;
+                font-size: 16px;
+                bottom: 15px;
+                right: 15px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="navbar-outer">
-        <nav class="navbar navbar-expand-md navbar-custom">
-            <div class="container m-2">
-                <a class="navbar-brand" href="#"><span>Welcome!</span></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html#home-container">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html#about-container">About me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html#info-container">Information</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="activities.html">Activities</a>
-                        </li>
-                    </ul>
+    <div class="navbar-fixed">
+        <div class="navbar-box d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <div class="logo-container">
+                    <img src="Photo/JLogo.png" alt="Julia Mae Logo"
+                        onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'logo-placeholder\'>JM</div>'">
                 </div>
+                <div class="welcome-text">Welcome!</div>
             </div>
-        </nav>
+
+            <div class="d-flex align-items-center">
+                <a href="index.html#home" class="nav-link-custom">Home</a>
+                <a href="activities.html" class="nav-link-custom active">Works</a>
+                <button id="themeToggle" class="theme-toggle">🔆</button>
+            </div>
+        </div>
     </div>
 
-    <div class="container mt-3">
-        <h2 class="text-start">Activities</h2>
+    <div class="container-fluid main-content">
 
-        <div class="row">
+        <div class="page-title">My Works</div>
 
-            <div class="col-12 col-md-6 col-lg-4 d-flex mb-4">
-                <div class="work-card flex-fill d-flex flex-column">
+        <div class="row g-4">
 
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="work-card">
                     <div class="thumb-box">
                         <iframe src="https://mrsgnjuliaaa.github.io/Product/" scrolling="no"></iframe>
                     </div>
-
-                    <h3>Activity 4 - Infinix Hot 50</h3>
-                    <p>A website showcasing the Infinix Hot 50.</p>
-                    <a href="https://mrsgnjuliaaa.github.io/Product/" target="_blank"
-                        class="btn btn-outline-dark mt-auto">View Website</a>
+                    <h3>Infinix Hot 50</h3>
+                    <p>A website showcasing the Infinix Hot 50 smartphone with product details, specifications, and features.</p>
+                    <a href="https://mrsgnjuliaaa.github.io/Product/" target="_blank" class="btn-view">View Website</a>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 d-flex mb-4">
-                <div class="work-card flex-fill d-flex flex-column">
-
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="work-card">
                     <div class="thumb-box">
                         <iframe src="https://mrsgnjuliaaa.github.io/Showcase/" scrolling="no"></iframe>
                     </div>
-
-                    <h3>Activity 5 - Boracay, Philippines</h3>
-                    <p>A website showcasing Boracay, the tropical paradise of the Philippines.</p>
-                    <a href="https://mrsgnjuliaaa.github.io/Showcase/" target="_blank"
-                        class="btn btn-outline-dark mt-auto">View Website</a>
+                    <h3>Boracay, Philippines</h3>
+                    <p>A travel website showcasing Boracay, the tropical paradise of the Philippines, featuring stunning visuals and travel information.</p>
+                    <a href="https://mrsgnjuliaaa.github.io/Showcase/" target="_blank" class="btn-view">View Website</a>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 d-flex mb-4">
-                <div class="work-card flex-fill d-flex flex-column">
-
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="work-card">
                     <div class="thumb-box">
                         <iframe src="https://mrsgnjuliaaa.github.io/Gallery/" scrolling="no"></iframe>
                     </div>
-
-                    <h3>Activity 6 - Philippine Tourist Spots Gallery</h3>
-                    <p>A photo gallery website showcasing famous tourist spots across the Philippines.</p>
-                    <a href="https://mrsgnjuliaaa.github.io/Gallery/" target="_blank"
-                        class="btn btn-outline-dark mt-auto">View Website</a>
+                    <h3>Philippine Tourist Spots Gallery</h3>
+                    <p>A responsive photo gallery website showcasing famous tourist spots across the Philippines with interactive features.</p>
+                    <a href="https://mrsgnjuliaaa.github.io/Gallery/" target="_blank" class="btn-view">View Website</a>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 d-flex mb-4">
-                <div class="work-card flex-fill d-flex flex-column">
-
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="work-card">
                     <div class="thumb-box">
                         <iframe src="https://mrsgnjuliaaa.github.io/API-Marvel-Comics-Characters/index.html"
                             scrolling="no"></iframe>
                     </div>
-
-                    <h3>Activity 7 - API Marvel Comics Characters</h3>
-                    <p>An API Photo Gallery is a paginated webpage that displays Marvel Comics Characters
-                        from the Superhero API, showing 12 character cards at a time.</p>
-                    <a href="https://mrsgnjuliaaa.github.io/API-Marvel-Comics-Characters/index.html" target="_blank"
-                        class="btn btn-outline-dark mt-auto">View Website</a>
+                    <h3>Marvel Comics Characters API</h3>
+                    <p>An interactive API photo gallery displaying Marvel Comics Characters from the Superhero API with pagination and character details.</p>
+                    <a href="https://mrsgnjuliaaa.github.io/API-Marvel-Comics-Characters/index.html" target="_blank" class="btn-view">View Website</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            html.style.colorScheme = 'dark';
+            document.body.classList.add('dark-mode');
+            themeToggle.textContent = '🌙';
+        } else {
+            html.style.colorScheme = 'light';
+            document.body.classList.remove('dark-mode');
+            themeToggle.textContent = '🔆';
+        }
+
+        themeToggle.addEventListener('click', function () {
+            const isDarkMode = document.body.classList.toggle('dark-mode');
+            html.style.colorScheme = isDarkMode ? 'dark' : 'light';
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+            themeToggle.textContent = isDarkMode ? '🌙' : '🔆';
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const worksLink = document.querySelector('a[href="activities.html"]');
+            if (worksLink) {
+                worksLink.classList.add('active');
+            }
+
+            document.querySelectorAll('.nav-link-custom').forEach(link => {
+                if (link !== worksLink) {
+                    link.classList.remove('active');
+                }
+            });
+        });
+t
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar-fixed');
+            if (window.scrollY > 50) {
+                navbar.style.top = '10px';
+                navbar.style.transform = 'translateX(-50%) scale(0.98)';
+                navbar.style.transition = 'all 0.3s ease';
+            } else {
+                navbar.style.top = '20px';
+                navbar.style.transform = 'translateX(-50%) scale(1)';
+            }
+
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        document.getElementById('backToTop').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        document.querySelectorAll('.work-card').forEach(card => {
+            card.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateY(-5px)';
+            });
+
+            card.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Julia Mae Marasigan.<br>All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 
 </html>
