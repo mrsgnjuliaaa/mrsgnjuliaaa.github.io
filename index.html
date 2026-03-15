@@ -295,136 +295,7 @@
             font-size: 14px;
         }
 
-        .theme-toggle {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #1F2933;
-            transition: all 0.3s ease;
-            padding: 8px 12px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 10px;
-        }
-
-        .theme-toggle:hover {
-            background-color: #6B8F71;
-            color: white;
-        }
-
-        body.dark-mode {
-            background-color: #1a1a1a;
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .navbar-box {
-            background-color: #2d2d2d;
-            border-color: #444;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        body.dark-mode .nav-link-custom {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .nav-link-custom:hover,
-        body.dark-mode .nav-link-custom.active {
-            background-color: #6B8F71;
-            color: white;
-        }
-
-        body.dark-mode .theme-toggle {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .soft-box {
-            background-color: #2d2d2d;
-            border-color: #444;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        body.dark-mode .soft-box:hover {
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
-        }
-
-        body.dark-mode .content-box {
-            background-color: #2d2d2d;
-        }
-
-        body.dark-mode .name-title {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .school-title {
-            color: #9dc683;
-        }
-
-        body.dark-mode .degree-title {
-            color: #b0b0b0;
-        }
-
-        body.dark-mode .about-content {
-            color: #b0b0b0;
-        }
-
-        body.dark-mode .info-label {
-            color: #b0b0b0;
-        }
-
-        body.dark-mode .info-value {
-            color: #b0b0b0;
-            border-left-color: #6B8F71;
-        }
-
-        body.dark-mode .info-value a {
-            color: #9dc683;
-        }
-
-        body.dark-mode h3 {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode footer {
-            background-color: #2d2d2d;
-            border-top-color: #444;
-        }
-
-        body.dark-mode .footer-section h4 {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .footer-section a {
-            color: #b0b0b0;
-        }
-
-        body.dark-mode .footer-section a:hover {
-            color: #9dc683;
-        }
-
-        body.dark-mode .footer-bottom {
-            color: #b0b0b0;
-        }
-
-        body.dark-mode .circle-image {
-            background-color: #2d2d2d;
-            border-color: #6B8F71;
-        }
-
-        body.dark-mode .logo-container {
-            background-color: #2d2d2d;
-            border-color: #6B8F71;
-        }
-
-        body.dark-mode .welcome-text {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .back-to-top:hover {
-            background-color: #5a7a5f;
-        }
+        
 
         .back-to-top {
             background-color: #6B8F71;
@@ -657,6 +528,27 @@
             .info-value {
                 margin-bottom: 20px;
             }
+
+            footer {
+                padding: 40px 15px 25px;
+            }
+
+            .footer-container {
+                gap: 30px;
+                grid-template-columns: 1fr;
+            }
+
+            .footer-section h4 {
+                font-size: 16px;
+            }
+
+            .footer-section a {
+                font-size: 14px;
+            }
+
+            .footer-bottom {
+                font-size: 13px;
+            }
         }
 
         @media (max-width: 576px) {
@@ -736,6 +628,31 @@
                 font-size: 15px;
                 margin-bottom: 18px;
             }
+
+            footer {
+                padding: 30px 10px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-container {
+                gap: 25px;
+            }
+
+            .footer-section h4 {
+                font-size: 15px;
+            }
+
+            .footer-section ul li {
+                margin-bottom: 8px;
+            }
+
+            .footer-section a {
+                font-size: 13px;
+            }
+
+            .footer-bottom {
+                font-size: 12px;
+            }
         }
     </style>
 
@@ -756,7 +673,6 @@
             <div class="d-flex align-items-center">
                 <a href="#home" class="nav-link-custom">Home</a>
                 <a href="activities.html" class="nav-link-custom">Works</a>
-                <button id="themeToggle" class="theme-toggle">🔆</button>
             </div>
         </div>
     </div>
@@ -841,27 +757,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        const themeToggle = document.getElementById('themeToggle');
-        const html = document.documentElement;
-
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        if (currentTheme === 'dark') {
-            html.style.colorScheme = 'dark';
-            document.body.classList.add('dark-mode');
-            themeToggle.textContent = '🌙';
-        } else {
-            html.style.colorScheme = 'light';
-            document.body.classList.remove('dark-mode');
-            themeToggle.textContent = '🔆';
-        }
-
-        themeToggle.addEventListener('click', function () {
-            const isDarkMode = document.body.classList.toggle('dark-mode');
-            html.style.colorScheme = isDarkMode ? 'dark' : 'light';
-            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-            themeToggle.textContent = isDarkMode ? '🌙' : '🔆';
-        });
-
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
