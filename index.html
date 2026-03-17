@@ -13,40 +13,10 @@
         rel="stylesheet">
 
     <style>
-        :root {
-            --bg: #F1F5F2;
-            --text: #1F2933;
-            --card: #ffffff;
-            --card-border: #D1DED6;
-            --primary: #6B8F71;
-            --secondary: #4B5563;
-            --shadow: rgba(107, 143, 113, 0.1);
-            --navbar-bg: #ffffff;
-            --footer-bg: #ffffff;
-            --link-hover: #5a7a5f;
-            --back-to-top: #6B8F71;
-            --back-to-top-hover: #5a7a5f;
-        }
-
-        .dark-mode {
-            --bg: #0b1220;
-            --text: #e5e7eb;
-            --card: #16202b;
-            --card-border: rgba(255, 255, 255, 0.1);
-            --primary: #8bff9a;
-            --secondary: #cbd5e1;
-            --shadow: rgba(0, 0, 0, 0.5);
-            --navbar-bg: #15202b;
-            --footer-bg: #15202b;
-            --link-hover: #6cffb5;
-            --back-to-top: #2b6d4d;
-            --back-to-top-hover: #1f4c36;
-        }
-
         body {
-            background-color: var(--bg);
+            background-color: #F1F5F2;
             font-family: 'Poppins', sans-serif;
-            color: var(--text);
+            color: #1F2933;
             padding-top: 100px;
         }
 
@@ -66,19 +36,19 @@
         }
 
         .navbar-box {
-            background-color: var(--navbar-bg);
+            background-color: #ffffff;
             border-radius: 35px;
-            box-shadow: 0 4px 20px var(--shadow);
-            border: 1px solid var(--card-border);
+            box-shadow: 0 4px 20px rgba(107, 143, 113, 0.1);
+            border: 1px solid #D1DED6;
             padding: 15px 30px;
             box-sizing: border-box;
         }
 
         .soft-box {
-            background-color: var(--card);
+            background-color: #ffffff;
             border-radius: 40px;
-            box-shadow: 0 4px 20px var(--shadow);
-            border: 1px solid var(--card-border);
+            box-shadow: 0 4px 20px rgba(107, 143, 113, 0.1);
+            border: 1px solid #D1DED6;
             transition: all 0.3s ease;
         }
 
@@ -90,14 +60,14 @@
         .circle-image {
             width: 260px;
             height: 260px;
-            background-color: var(--card);
+            background-color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            box-shadow: 0 4px 15px var(--shadow);
-            border: 3px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(107, 143, 113, 0.15);
+            border: 3px solid #6B8F71;
         }
 
         .circle-image img {
@@ -115,9 +85,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: var(--card);
-            border: 2px solid var(--primary);
-            box-shadow: 0 2px 8px var(--shadow);
+            background-color: #ffffff;
+            border: 2px solid #6B8F71;
+            box-shadow: 0 2px 8px rgba(107, 143, 113, 0.3);
         }
 
         .logo-container img {
@@ -136,26 +106,26 @@
             font-size: 16px;
             margin-bottom: 24px;
             padding-left: 15px;
-            color: var(--secondary);
-            border-left: 2px solid var(--primary);
+            color: #4B5563;
+            border-left: 2px solid #6B8F71;
             line-height: 1.5;
             word-break: break-word;
             overflow-wrap: break-word;
         }
 
         .info-value a {
-            color: var(--primary);
+            color: #6B8F71;
             text-decoration: none;
             font-weight: 500;
         }
 
         .info-value a:hover {
             text-decoration: underline;
-            color: var(--link-hover);
+            color: #5a7a5f;
         }
 
         .nav-link-custom {
-            color: var(--text);
+            color: #1F2933;
             font-weight: 500;
             text-decoration: none;
             padding: 10px 20px;
@@ -165,33 +135,33 @@
         }
 
         .nav-link-custom:hover {
-            background-color: var(--primary);
-            color: var(--card);
+            background-color: #6B8F71;
+            color: white;
             text-decoration: none;
         }
 
         .nav-link-custom.active {
-            background-color: var(--primary);
-            color: var(--card);
+            background-color: #6B8F71;
+            color: white;
         }
 
         .name-title {
             font-size: 36px;
             font-weight: 700;
-            color: var(--text);
+            color: #1F2933;
             margin-bottom: 10px;
         }
 
         .school-title {
             font-size: 22px;
-            color: var(--primary);
+            color: #6B8F71;
             font-weight: 500;
             line-height: 1.3;
         }
 
         .degree-title {
             font-size: 18px;
-            color: var(--secondary);
+            color: #4B5563;
             font-weight: 400;
             margin-top: 5px;
             line-height: 1.4;
@@ -209,7 +179,7 @@
             margin-bottom: 25px;
             position: relative;
             padding-bottom: 10px;
-            color: var(--text);
+            color: #1F2933;
             font-weight: 600;
         }
 
@@ -220,33 +190,35 @@
             bottom: 0;
             width: 60px;
             height: 3px;
-            background-color: var(--primary);
+            background-color: #6B8F71;
             border-radius: 2px;
         }
 
         .about-content {
             font-size: 18px;
             line-height: 1.6;
-            color: var(--secondary);
+            color: #4B5563;
         }
 
         .highlight {
-            color: var(--primary);
+            color: #6B8F71;
             font-weight: 600;
         }
 
         .welcome-text {
-            color: var(--text);
+            color: #1F2933;
             font-weight: 600;
             font-size: 20px;
             margin-left: 15px;
         }
 
         footer {
-            background-color: var(--footer-bg);
-            border-top: 1px solid var(--card-border);
-            padding: 50px 20px 30px;
+            background-color: #ffffff;
+            border-top: 1px solid #D1DED6;
+            padding: 40px 20px 25px;
             margin-top: 60px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .footer-container {
@@ -258,10 +230,24 @@
             margin-bottom: 30px;
         }
 
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            color: #4B5563;
+            font-size: 14px;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
         .footer-section h4 {
             font-size: 18px;
             font-weight: 600;
-            color: var(--text);
+            color: #1F2933;
             margin-bottom: 15px;
         }
 
@@ -276,14 +262,14 @@
         }
 
         .footer-section a {
-            color: var(--secondary);
+            color: #4B5563;
             text-decoration: none;
             font-size: 15px;
             transition: all 0.3s ease;
         }
 
         .footer-section a:hover {
-            color: var(--primary);
+            color: #6B8F71;
             font-weight: 500;
         }
 
@@ -297,8 +283,8 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: var(--primary);
-            color: var(--card);
+            background-color: #6B8F71;
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -309,25 +295,156 @@
         }
 
         .social-icon:hover {
-            background-color: var(--link-hover);
+            background-color: #5a7a5f;
             transform: translateY(-3px);
         }
 
         .footer-divider {
             height: 1px;
-            background-color: var(--card-border);
+            background-color: #D1DED6;
             margin: 30px 0;
         }
 
         .footer-bottom {
             text-align: center;
-            color: var(--secondary);
+            color: #4B5563;
             font-size: 14px;
         }
 
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #1F2933;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+        }
+
+        .theme-toggle:hover {
+            background-color: #6B8F71;
+            color: white;
+        }
+
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .navbar-box {
+            background-color: #2d2d2d;
+            border-color: #444;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .nav-link-custom {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .nav-link-custom:hover,
+        body.dark-mode .nav-link-custom.active {
+            background-color: #6B8F71;
+            color: white;
+        }
+
+        body.dark-mode .theme-toggle {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .soft-box {
+            background-color: #2d2d2d;
+            border-color: #444;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .soft-box:hover {
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        body.dark-mode .content-box {
+            background-color: #2d2d2d;
+        }
+
+        body.dark-mode .name-title {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .school-title {
+            color: #9dc683;
+        }
+
+        body.dark-mode .degree-title {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode .about-content {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode .info-label {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode .info-value {
+            color: #b0b0b0;
+            border-left-color: #6B8F71;
+        }
+
+        body.dark-mode .info-value a {
+            color: #9dc683;
+        }
+
+        body.dark-mode h3 {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode footer {
+            background-color: #2d2d2d;
+            border-top-color: #444;
+        }
+
+        body.dark-mode .footer-section h4 {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .footer-section a {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode .footer-section a:hover {
+            color: #9dc683;
+        }
+
+        body.dark-mode .footer-bottom {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode .circle-image {
+            background-color: #2d2d2d;
+            border-color: #6B8F71;
+        }
+
+        body.dark-mode .logo-container {
+            background-color: #2d2d2d;
+            border-color: #6B8F71;
+        }
+
+        body.dark-mode .welcome-text {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .back-to-top:hover {
+            background-color: #5a7a5f;
+        }
+
         .back-to-top {
-            background-color: var(--back-to-top);
-            color: var(--card);
+            background-color: #6B8F71;
+            color: white;
             width: 45px;
             height: 45px;
             border-radius: 50%;
@@ -351,7 +468,7 @@
         }
 
         .back-to-top:hover {
-            background-color: var(--back-to-top-hover);
+            background-color: #5a7a5f;
             transform: translateY(-3px);
         }
 
@@ -556,27 +673,6 @@
             .info-value {
                 margin-bottom: 20px;
             }
-
-            footer {
-                padding: 40px 15px 25px;
-            }
-
-            .footer-container {
-                gap: 30px;
-                grid-template-columns: 1fr;
-            }
-
-            .footer-section h4 {
-                font-size: 16px;
-            }
-
-            .footer-section a {
-                font-size: 14px;
-            }
-
-            .footer-bottom {
-                font-size: 13px;
-            }
         }
 
         @media (max-width: 576px) {
@@ -656,31 +752,6 @@
                 font-size: 15px;
                 margin-bottom: 18px;
             }
-
-            footer {
-                padding: 30px 10px 20px;
-                margin-top: 40px;
-            }
-
-            .footer-container {
-                gap: 25px;
-            }
-
-            .footer-section h4 {
-                font-size: 15px;
-            }
-
-            .footer-section ul li {
-                margin-bottom: 8px;
-            }
-
-            .footer-section a {
-                font-size: 13px;
-            }
-
-            .footer-bottom {
-                font-size: 12px;
-            }
         }
     </style>
 
@@ -692,16 +763,16 @@
         <div class="navbar-box d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center">
                 <div class="logo-container">
-                    <img src="Photo/Julia's Logo.png" alt="Julia Mae Logo"
+                    <img src="Photo/JLogo.png" alt="Julia Mae Logo"
                         onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'logo-placeholder\'>JM</div>'">
                 </div>
                 <div class="welcome-text">Welcome!</div>
-                <button id="themeToggle" class="btn btn-sm btn-outline-secondary ms-3" type="button" title="Toggle theme">🌙</button>
             </div>
 
             <div class="d-flex align-items-center">
                 <a href="#home" class="nav-link-custom">Home</a>
                 <a href="activities.html" class="nav-link-custom">Works</a>
+                <button id="themeToggle" class="theme-toggle">🔆</button>
             </div>
         </div>
     </div>
@@ -786,24 +857,26 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        function applyTheme(theme) {
-            document.body.classList.toggle('dark-mode', theme === 'dark');
-            const toggle = document.getElementById('themeToggle');
-            if (toggle) toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            html.style.colorScheme = 'dark';
+            document.body.classList.add('dark-mode');
+            themeToggle.textContent = '🌙';
+        } else {
+            html.style.colorScheme = 'light';
+            document.body.classList.remove('dark-mode');
+            themeToggle.textContent = '🔆';
         }
 
-        function loadTheme() {
-            const stored = localStorage.getItem('theme');
-            const theme = stored || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            applyTheme(theme);
-        }
-
-        function toggleTheme() {
-            const isDark = document.body.classList.contains('dark-mode');
-            const next = isDark ? 'light' : 'dark';
-            applyTheme(next);
-            localStorage.setItem('theme', next);
-        }
+        themeToggle.addEventListener('click', function () {
+            const isDarkMode = document.body.classList.toggle('dark-mode');
+            html.style.colorScheme = isDarkMode ? 'dark' : 'light';
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+            themeToggle.textContent = isDarkMode ? '🌙' : '🔆';
+        });
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -851,13 +924,6 @@
                     worksLink.classList.add('active');
                 }
             }
-
-            const themeToggle = document.getElementById('themeToggle');
-            if (themeToggle) {
-                themeToggle.addEventListener('click', toggleTheme);
-            }
-
-            loadTheme();
         });
 
         window.addEventListener('scroll', function () {
